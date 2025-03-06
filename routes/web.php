@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\WelcomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,7 +31,5 @@ Route::resource('photos', PhotoController::class)->only([
     'create', 'store', 'update', 'destroy'
     ]);
 
-    Route::get('/greeting', function () {
-        return view('hello', ['name' => 'Bhimantara']);
-    });
-    
+    Route::get('/greeting', [WelcomeController::class,
+'greeting']);
