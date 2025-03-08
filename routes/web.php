@@ -17,8 +17,6 @@ use App\Http\Controllers\SalesController;
 |
 */
 
-
-
 // Halaman Utama
 Route::get('/', [HomeController::class, 'index']);
 
